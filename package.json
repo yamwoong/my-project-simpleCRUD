@@ -1,0 +1,18 @@
+{
+  "name": "my-project-simplecrud",
+  "version": "1.0.0",
+  "description": "- 프로젝트 이름 : simpleCRUD\r - 기술 스택 : Node.js, MongoDB, Express, EJS\r - 주요기능 : CRUD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.12.1"
+  }
+}
