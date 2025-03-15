@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 수정</title>
+    <link rel="stylesheet" href="/css/edit.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+    <div class="container">
+        <h1>게시글 수정</h1>
+        
+        <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+            <label for="title">제목:</label>
+            <input type="text" id="title" name="title" value="<%= post.title %>" required>
+
+            <label for="content">내용:</label>
+            <textarea id="content" name="content" rows="5" required><%= post.content %></textarea>
+
+            <button type="submit">수정 완료</button>
+        </form>
+
+        <a href="/posts/<%= post._id %>" class="back-link">← 게시글로 돌아가기</a>
+    </div>
+</body>
+</html>

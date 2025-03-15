@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 게시글 작성</title>
+    <link rel="stylesheet" href="/css/new.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+    <h1>새 게시글 작성</h1>
+
+    <form action="/posts" method="POST">
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">내용:</label>
+        <textarea id="content" name="content" rows="5" required></textarea>
+
+        <button type="submit">게시글 저장</button>
+    </form>
+
+    <a href="/posts">← 게시글 목록으로</a>
+</body>
+</html>

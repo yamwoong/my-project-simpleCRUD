@@ -14,15 +14,33 @@
 - [x] 프로젝트 초기 설정 (`npm init`)
 - [x] Express 설치 및 기본 서버 구축
 - [x] MongoDB 연결 설정
-- [] CRUD 기능 개발
+- [x] CRUD 기능 개발
+    - # 보통은 라우터 -> 컨트롤러 순서로 개발
     - # 라우터 구현 중 추천하는 테스트 순서
         - 1. GET /posts → 데이터가 없을 때도 빈 배열 []이 오는지 확인 [X]
-        - 2. POST /posts → 데이터 추가가 정상적으로 되는지 확인 []
-        - 3. GET /posts/:id → 추가한 데이터가 정상적으로 조회되는지 확인 []
-        - 4. PUT /posts/:id → 게시글을 수정할 수 있는지 확인 []
-        - 5. DELETE /posts/:id → 게시글 삭제가 정상 동작하는지 확인 []
-- [] EJS 템플릿 만들기
-- [] 배포하기 (Heroku 또는 Render)
+        - 2. POST /posts → 데이터 추가가 정상적으로 되는지 확인 [x]
+        - 3. GET /posts/:id → 추가한 데이터가 정상적으로 조회되는지 확인 [x]
+        - 4. PUT /posts/:id → 게시글을 수정할 수 있는지 확인 [x]
+        - 5. DELETE /posts/:id → 게시글 삭제가 정상 동작하는지 확인 [x]
+- [x] EJS 템플릿 만들기
+- [x] 404/ 오류 미들웨어 구현
+<!-- - [] 배포하기 (Heroku 또는 Render) -->
+
+# 기능 목록
+    - 게시글 목록 조회
+    - 게시글 상세 조회
+    - 새 게시글 작성 (폼 페이지 + 저장)
+    - 게시글 수정 (폼 페이지 + 업데이트)
+    - 게시글 삭제
+
+# 게시글 관련 API 정의
+    - GET	    /posts	        모든 게시글 조회
+    - GET	    /posts/new	    새 게시글 작성 폼 렌더링
+    - POST	    /posts	        새 게시글 저장
+    - GET	    /posts/:id	    특정 게시글 상세 조회
+    - GET	    /posts/:id/edit 게시글 수정 폼 렌더링
+    - PUT	    /posts/:id	    게시글 수정
+    - DELETE	/posts/:id	    게시글 삭제
 
 # 사용된 npm 패키지
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 목록</title>
+    <link rel="stylesheet" href="/css/index.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+    <div class="container">
+        <h1>게시글 목록</h1>
+
+        <% if (posts.length > 0) { %>  
+            <ul>
+                <% posts.forEach(post => { %>
+                    <li>
+                        <a href="/posts/<%= post._id %>"><%= post.title %> : <%= post.content %></a>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>게시글이 없습니다.</p>
+        <% } %>
+
+        <!-- 새 게시글 작성 페이지로 이동하는 버튼 -->
+        <div class="btn-container">
+            <a href="/posts/new" class="new-post-btn">게시글 작성</a>
+        </div>
+    </div>
+</body>
+</html>
